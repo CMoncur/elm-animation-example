@@ -1,0 +1,8 @@
+.DS_Store
+.sass-cache
+css/.sass-cache/*
+main.css
+main.css.map
+main.js
+css/partials
+/elm-stuff
