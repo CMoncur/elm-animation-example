@@ -15,7 +15,7 @@ import Msg exposing ( Msg( .. ) )
 -- Supporting Functions
 init : ( Model, Cmd Msg )
 init =
-  ( { thing = "hey"
+  ( { active_item = 0
     }
   , Cmd.none
   )
@@ -29,8 +29,8 @@ subscriptions _ =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
   case msg of
-    DoThing str ->
-      { model | thing = str }
+    UpdateActiveItem int ->
+      { model | active_item = int }
       ![ Cmd.none ]
 
 

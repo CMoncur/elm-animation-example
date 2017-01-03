@@ -1,5 +1,5 @@
 module Model exposing ( Model )
 
 type alias Model =
-  { thing : String
+  { active_item : Int
   }
