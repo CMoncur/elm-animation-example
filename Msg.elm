@@ -1,4 +1,7 @@
 module Msg exposing ( Msg( .. ) )
 
+import Time exposing ( Time )
+
 type Msg
-  = UpdateActiveItem Int
+  = NewTime Time
+  | UpdateActiveItem Int

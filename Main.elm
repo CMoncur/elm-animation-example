@@ -4,6 +4,8 @@ module Main exposing ( main )
 import Html exposing ( Html, div, input, p, program, text )
 import Html.Attributes exposing ( class, placeholder )
 import Html.Events exposing ( onInput )
+import Task as Task
+import Time as Time exposing ( Time, every, second )
 
 -- Internal Dependencies
 import Card as Card
@@ -16,22 +18,31 @@ import Msg exposing ( Msg( .. ) )
 init : ( Model, Cmd Msg )
 init =
   ( { active_item = 0
+    , time        = 0
     }
-  , Cmd.none
+  , Cmd.batch
+      [ Time.now |> Task.perform NewTime
+      ]
   )
 
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-  Sub.none
+  Sub.batch
+    [ every ( second * 1.5 ) NewTime
+    ]
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
   case msg of
+    NewTime new_time ->
+      { model | time = new_time }
+      ! [ Cmd.none ]
+
     UpdateActiveItem int ->
       { model | active_item = int }
-      ![ Cmd.none ]
+      ! [ Cmd.none ]
 
 
 view : Model -> Html Msg
@@ -44,6 +55,7 @@ view model =
     , Card.render
     , Card.render
     , Card.render
+    , text <| toString model.time
     ]
 
 
