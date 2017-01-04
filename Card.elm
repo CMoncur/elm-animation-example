@@ -26,14 +26,15 @@ influencerText =
     , i [ class "fa fa-instagram fa-fw" ] []
     ]
 
-influencerMetadata : Html Msg
-influencerMetadata =
+influencerMetadata : Int -> Html Msg
+influencerMetadata rotation =
   div
     [ class "influencer-metadata" ]
     [ div [ class "approval-status" ] []
     , div
         [ class "influencer-info" ]
         [ influencerText
+        , p [] [ text <| toString rotation ]
         ]
     ]
 
@@ -75,21 +76,34 @@ portrait =
         ]
     ]
 
+rotationAmount : Int -> String
+rotationAmount rot =
+  String.concat
+    [ "rotateY("
+    , ( toString rot )
+    , "deg)"
+    ]
+
 
 -- Main Influencer Card
-render : Html Msg
-render =
+render : Int -> Html Msg
+render rotation =
   div
     [ class "card-influencer" ]
     [ div
-        []
+        [ style
+            [ ( "transform"
+              , rotationAmount rotation
+              )
+            ]
+        ]
         [ div
             [ class "front" ]
             [ portrait
-            , influencerMetadata
+            , influencerMetadata rotation
             ]
         , div
             [ class "back" ]
-            [ influencerMetadata ]
+            [ influencerMetadata rotation ]
         ]
     ]
