@@ -37,19 +37,17 @@ img
 
 .card-influencer-cont
   margin: 0 auto
-  perspective: 1700px
-  width: 960px
+  perspective: 3000px
+  width: 789px
 
 .card-influencer
   cursor: pointer
   float: left
   font-family:  "OpenSans-Bold", "OpenSans Bold", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
-  height: 375px
+  height: 145px
   margin: 20px 10px 30px 10px
   position: relative
-  width: 300px
-  &.flipped > div
-    transform: rotateY(180deg)
+  width: 243px
   > div
     height: 100%
     left: 0
@@ -58,6 +56,13 @@ img
     width: 100%
     transform-style: preserve-3d
     transition: transform 0.7s
+    > div > div
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
+      border-radius: 5px
+      height: 100%
+      width: 100%
     .front, .back
       backface-visibility: hidden
       background: #fff
@@ -75,50 +80,9 @@ img
       background: #fff
       transform: rotateY(180deg)
 
-
-  .influencer-metadata
-    height: 30%
-    padding: 20px 0
-    position: relative
-    width: 100%
-    .approval-status
-      border: 2px solid #dfe1e5
-      border-radius: 50%
-      height: 15px
-      position: absolute
-      right: 10px
-      top: 10px
-      width: 15px
-    .influencer-text
-      text-align: center
-    h3
-      color: #464D5D
-      font-size: 16px
-      font-weight: 400
-      line-height: 25px
-    h4
-      color: #9CA2AB
-      font-size: 12px
-      font-weight: 700
-      text-transform: uppercase
-    i
-      color: #464D5D
-      margin: 10px 0 0 0
-    p
-      text-align: center
-  .influencer-portrait
-    background-position: center center
-    background-repeat: no-repeat
-    background-size: cover
-    border-top-left-radius: 5px
-    border-top-right-radius: 5px
-    height: 70%
-    width: 100%
-  .status-overlay
-    display: none
-
 .influencer-portrait-info
-  background: linear-gradient(to top, 0% rgba(0,0,0,1), 50% rgba(0,0,0,0))
+  background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%)
+  border-radius: 5px
   height: 100%
   position: relative
   width: 100%
@@ -131,8 +95,8 @@ img
     background: #464D5D
     border-radius: 10px
     height: 19px
-    left: 10px
     position: absolute
+    right: 10px
     top: 10px
     .influencer-score-svg
       left: 1px
@@ -154,20 +118,20 @@ img
     top: 10px
 
 .influencer-progress
-  bottom: 20px
-  left: 15%
+  bottom: 12px
   position: absolute
-  width: 70%
-  .progress-base
+  right: 12px
+  width: calc(50% - 20px)
+  > div
     background: rgba(70,77,93,0.55)
-    border-radius: 4px
-    height: 8px
+    border-radius: 2px
+    height: 4px
     overflow: hidden
     position: relative
     width: 100%
-    .progress-bar
+    > div
       background: linear-gradient(to left, #fad961, #f76b1c)
-      border-radius: 4px
+      border-radius: 2px
       height: 100%
       left: 0
       position: absolute
@@ -175,10 +139,51 @@ img
       width: 75%
   p
     color: #FAFBFD
-    font-size: 14px
-    font-weight: 300
-    margin: 0 0 8px 0
-    text-align: center
+    font-family: "Open Sans"
+    font-size: 12px
+    margin: 0 0 4px 0
+    text-align: right
     text-transform: uppercase
     > span
-      font-weight: 600
+      font-family: "OpenSans-Bold"
+
+
+
+
+
+
+
+
+
+
+
+  // .influencer-metadata
+  //   height: 30%
+  //   padding: 20px 0
+  //   position: relative
+  //   width: 100%
+  //   .approval-status
+  //     border: 2px solid #dfe1e5
+  //     border-radius: 50%
+  //     height: 15px
+  //     position: absolute
+  //     right: 10px
+  //     top: 10px
+  //     width: 15px
+  //   .influencer-text
+  //     text-align: center
+  //   h3
+  //     color: #464D5D
+  //     font-size: 16px
+  //     font-weight: 400
+  //     line-height: 25px
+  //   h4
+  //     color: #9CA2AB
+  //     font-size: 12px
+  //     font-weight: 700
+  //     text-transform: uppercase
+  //   i
+  //     color: #464D5D
+  //     margin: 10px 0 0 0
+  //   p
+  //     text-align: center

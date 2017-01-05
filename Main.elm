@@ -52,124 +52,124 @@ update msg model =
       case ( first_int, second_int ) of
         ( 1, 1 ) ->
           { model |
-              rotation_1 = Util.updateRotation True model.rotation_1
+              rotation_1 = Util.updateRotation False model.rotation_1
           }
           ! [ Cmd.none ]
 
         ( 1, 2 ) ->
           { model |
-              rotation_1 = Util.updateRotation True model.rotation_1,
-              rotation_2 = Util.updateRotation True model.rotation_2
+              rotation_1 = Util.updateRotation False model.rotation_1,
+              rotation_2 = Util.updateRotation False model.rotation_2
           }
           ! [ Cmd.none ]
 
         ( 1, 3 ) ->
           { model |
-              rotation_1 = Util.updateRotation True model.rotation_1,
-              rotation_3 = Util.updateRotation True model.rotation_3
+              rotation_1 = Util.updateRotation False model.rotation_1,
+              rotation_3 = Util.updateRotation False model.rotation_3
           }
           ! [ Cmd.none ]
 
         ( 1, 4 ) ->
           { model |
-              rotation_1 = Util.updateRotation True model.rotation_1,
-              rotation_4 = Util.updateRotation True model.rotation_4
+              rotation_1 = Util.updateRotation False model.rotation_1,
+              rotation_4 = Util.updateRotation False model.rotation_4
           }
           ! [ Cmd.none ]
 
         ( 1, 5 ) ->
           { model |
-              rotation_1 = Util.updateRotation True model.rotation_1,
-              rotation_5 = Util.updateRotation True model.rotation_5
+              rotation_1 = Util.updateRotation False model.rotation_1,
+              rotation_5 = Util.updateRotation False model.rotation_5
           }
           ! [ Cmd.none ]
 
         ( 1, 6 ) ->
           { model |
-              rotation_1 = Util.updateRotation True model.rotation_1,
-              rotation_6 = Util.updateRotation True model.rotation_6
+              rotation_1 = Util.updateRotation False model.rotation_1,
+              rotation_6 = Util.updateRotation False model.rotation_6
           }
           ! [ Cmd.none ]
 
         ( 3, 1 ) ->
           { model |
-              rotation_1 = Util.updateRotation True model.rotation_1,
-              rotation_3 = Util.updateRotation True model.rotation_3
+              rotation_1 = Util.updateRotation False model.rotation_1,
+              rotation_3 = Util.updateRotation False model.rotation_3
           }
           ! [ Cmd.none ]
 
         ( 3, 2 ) ->
           { model |
-              rotation_2 = Util.updateRotation True model.rotation_2,
-              rotation_3 = Util.updateRotation True model.rotation_3
+              rotation_2 = Util.updateRotation False model.rotation_2,
+              rotation_3 = Util.updateRotation False model.rotation_3
           }
           ! [ Cmd.none ]
 
         ( 3, 3 ) ->
           { model |
-              rotation_3 = Util.updateRotation True model.rotation_3
+              rotation_3 = Util.updateRotation False model.rotation_3
           }
           ! [ Cmd.none ]
 
         ( 3, 4 ) ->
           { model |
-              rotation_3 = Util.updateRotation True model.rotation_3,
-              rotation_4 = Util.updateRotation True model.rotation_4
+              rotation_3 = Util.updateRotation False model.rotation_3,
+              rotation_4 = Util.updateRotation False model.rotation_4
           }
           ! [ Cmd.none ]
 
         ( 3, 5 ) ->
           { model |
-              rotation_3 = Util.updateRotation True model.rotation_3,
-              rotation_5 = Util.updateRotation True model.rotation_5
+              rotation_3 = Util.updateRotation False model.rotation_3,
+              rotation_5 = Util.updateRotation False model.rotation_5
           }
           ! [ Cmd.none ]
 
         ( 3, 6 ) ->
           { model |
-              rotation_3 = Util.updateRotation True model.rotation_3,
-              rotation_6 = Util.updateRotation True model.rotation_6
+              rotation_3 = Util.updateRotation False model.rotation_3,
+              rotation_6 = Util.updateRotation False model.rotation_6
           }
           ! [ Cmd.none ]
 
         ( 5, 1 ) ->
           { model |
-              rotation_1 = Util.updateRotation True model.rotation_1,
-              rotation_5 = Util.updateRotation True model.rotation_5
+              rotation_1 = Util.updateRotation False model.rotation_1,
+              rotation_5 = Util.updateRotation False model.rotation_5
           }
           ! [ Cmd.none ]
 
         ( 5, 2 ) ->
           { model |
-              rotation_2 = Util.updateRotation True model.rotation_2,
-              rotation_5 = Util.updateRotation True model.rotation_5
+              rotation_2 = Util.updateRotation False model.rotation_2,
+              rotation_5 = Util.updateRotation False model.rotation_5
           }
           ! [ Cmd.none ]
 
         ( 5, 3 ) ->
           { model |
-              rotation_3 = Util.updateRotation True model.rotation_3,
-              rotation_5 = Util.updateRotation True model.rotation_5
+              rotation_3 = Util.updateRotation False model.rotation_3,
+              rotation_5 = Util.updateRotation False model.rotation_5
           }
           ! [ Cmd.none ]
 
         ( 5, 4 ) ->
           { model |
-              rotation_4 = Util.updateRotation True model.rotation_4,
-              rotation_5 = Util.updateRotation True model.rotation_5
+              rotation_4 = Util.updateRotation False model.rotation_4,
+              rotation_5 = Util.updateRotation False model.rotation_5
           }
           ! [ Cmd.none ]
 
         ( 5, 5 ) ->
           { model |
-              rotation_5 = Util.updateRotation True model.rotation_5
+              rotation_5 = Util.updateRotation False model.rotation_5
           }
           ! [ Cmd.none ]
 
         ( 5, 6 ) ->
           { model |
-              rotation_5 = Util.updateRotation True model.rotation_5,
-              rotation_6 = Util.updateRotation True model.rotation_6
+              rotation_5 = Util.updateRotation False model.rotation_5,
+              rotation_6 = Util.updateRotation False model.rotation_6
           }
           ! [ Cmd.none ]
 
